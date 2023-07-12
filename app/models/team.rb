@@ -9,7 +9,7 @@ class Team < ApplicationRecord
   has_many :members, through: :assigns, source: :user
   has_many :articles, dependent: :destroy
   has_many :agendas, dependent: :destroy
-  has_many :users, foreign_key: :keep_team_id
+  has_many :uåsers, foreign_key: :keep_team_id
   mount_uploader :icon, ImageUploader
 
   def invite_member(user)
